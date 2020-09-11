@@ -57,6 +57,7 @@ public enum Key {
     case grave // Backtick
     case leftBracket
     case minus
+    case sectionSign
 
     // MARK: - Whitespace
 
@@ -173,6 +174,7 @@ public enum Key {
 		case "nine", "9": self = .nine
 		case "seven", "7": self = .seven
 		case "minus", "-": self = .minus
+        case "sectionSign", "§": self = .sectionSign
 		case "eight", "8": self = .eight
 		case "zero", "0": self = .zero
 		case "rightBracket", "]": self = .rightBracket
@@ -292,6 +294,7 @@ public enum Key {
 		case UInt32(kVK_ANSI_9): self = .nine
 		case UInt32(kVK_ANSI_7): self = .seven
 		case UInt32(kVK_ANSI_Minus): self = .minus
+        case UInt32(kVK_ISO_Section): self = .sectionSign
 		case UInt32(kVK_ANSI_8): self = .eight
 		case UInt32(kVK_ANSI_0): self = .zero
 		case UInt32(kVK_ANSI_RightBracket): self = .rightBracket
@@ -411,6 +414,7 @@ public enum Key {
 		case .nine: return UInt32(kVK_ANSI_9)
 		case .seven: return UInt32(kVK_ANSI_7)
 		case .minus: return UInt32(kVK_ANSI_Minus)
+        case .sectionSign: return UInt32(kVK_ISO_Section)
 		case .eight: return UInt32(kVK_ANSI_8)
 		case .zero: return UInt32(kVK_ANSI_0)
 		case .rightBracket: return UInt32(kVK_ANSI_RightBracket)
@@ -531,6 +535,7 @@ extension Key: CustomStringConvertible {
         case .nine, .keypad9: return "9"
         case .seven, .keypad7: return "7"
         case .minus: return "-"
+        case .sectionSign: return "§"
         case .eight, .keypad8: return "8"
         case .zero, .keypad0: return "0"
         case .rightBracket: return "]"
